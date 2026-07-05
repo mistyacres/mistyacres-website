@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 const TradeList = () => {
     const [tableData, setTableData] = useState([]);
@@ -24,10 +24,10 @@ const TradeList = () => {
         const lines = csvText.trim().split('\n');
         const allRows = [];
 
-        // First row is now the date range
+        // First row is the date
         const dateRangeLine = lines[0].split(',')[0].trim();
 
-        // Second row is header
+        // Second row is the header
         const headers = lines[1].split(',');
         allRows.push({
             type: 'header',
@@ -154,11 +154,6 @@ const TradeList = () => {
                     </tbody>
                 </Table>
             </div>
-            <Row className="text-secondary">
-                <Col className="text-center">
-                    <div className="lead">Plus lots of other exciting native varieties becoming available in winter - large and small grades.</div>
-                </Col>
-            </Row>
         </>
     );
 };
