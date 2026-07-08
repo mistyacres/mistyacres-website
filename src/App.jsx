@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import NavComponent from './components/Navbar';
 import Store from './components/Store';
+import Video from "./components/Video";
 
 library.add(faFileCirclePlus, faFileCircleXmark, faMinus, faPlus, faSeedling, faX)
 
@@ -28,6 +29,7 @@ function App() {
       <NavComponent></NavComponent>
       <Header></Header>
       <About></About>
+      <Video></Video>
       <Store></Store>
       <Contact></Contact>
       <Footer></Footer>

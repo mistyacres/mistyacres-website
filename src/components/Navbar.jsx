@@ -29,7 +29,7 @@ function NavComponent() {
 		document.querySelector(targetId).scrollIntoView();
 	};
 
-	const activeId = useScrollSpy(['home', 'about', 'catalogue', 'contact'], 100);
+	const activeId = useScrollSpy(['home', 'about', 'video', 'catalogue', 'contact'], 100);
 
 	// Render Nav
 	return (
@@ -44,6 +44,9 @@ function NavComponent() {
 					<Nav as="ul" variant="pills" activeKey={activeId} className="justify-content-end align-items-center" id="navbarResponsive">
 						<Nav.Item as="li" className="mx-2 mx-md-1">
 							<Nav.Link eventKey="about" href="#about" onClick={handleLinkClick}>About</Nav.Link>
+						</Nav.Item>
+						<Nav.Item as="li" className="mx-2 mx-md-1">
+							<Nav.Link eventKey="video" href="#video" onClick={handleLinkClick}>Video</Nav.Link>
 						</Nav.Item>
 						<Nav.Item as="li" className="mx-2 mx-md-1">
 							<Nav.Link eventKey="catalogue" href="#catalogue" onClick={handleLinkClick}>Catalogue</Nav.Link>

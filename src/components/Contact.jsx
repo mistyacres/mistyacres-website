@@ -36,7 +36,7 @@ export default function Contact() {
 
 	// Render Contact Form
 	return (
-		<section className="page-section bg-blue" id="contact">
+		<section className="page-section bg-purple" id="contact">
 			<Container>
 				<h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Us</h2>
 				<div className="divider-custom">

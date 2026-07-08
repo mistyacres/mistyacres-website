@@ -8,14 +8,15 @@
 
 @media (max-width: 420px) {
   .nav-link {
-    padding: 0.35rem 0.3rem;
+    padding: 0.35rem 0.2rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 320px) {
   .nav-link {
     padding: 0.15rem 0.2rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 

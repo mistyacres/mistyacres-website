@@ -15,7 +15,7 @@ function Store() {
 	// Render Store
 	return (
 		<>
-			<section className="page-section bg-purple text-white portfolio" id="catalogue">
+			<section className="page-section bg-blue text-white portfolio" id="catalogue">
 				<Container>
 					<h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Catalogue</h2>
 					<div className="divider-custom">
