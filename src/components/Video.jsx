@@ -19,7 +19,7 @@ function Video() {
 						<Col lg="auto">
 							<iframe
 								class="video-frame"
-								src='https://www.youtube.com/embed/BZcJgWMtw5I'
+								src='https://www.youtube.com/embed?listType=playlist&list=UUBMaYJ1Cqqi3W1fJwNyghdQ'
 								frameborder='0'
 								allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 								referrerpolicy="strict-origin-when-cross-origin"
