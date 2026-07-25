@@ -13,7 +13,7 @@ function Footer() {
 					</p>
 				</div>
 				<div className="pt-2">
-					<a href="https://github.com/bojodesign/mistyacres/issues" className="issues">
+					<a href="https://github.com/mistyacres/website/issues" className="issues">
 						<small>Report an issue</small>
 					</a>
 				</div>
