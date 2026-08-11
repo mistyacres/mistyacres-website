@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import { defineConfig } from 'vite'
-import fileMetadataPlugin from './plugins/vite-plugin-metadata';
+import fileMetadataPlugin from './plugins/vite-plugin-metadata.js';
 
 // https://vitejs.dev/config/
 export default defineConfig({
