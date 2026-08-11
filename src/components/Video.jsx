@@ -18,12 +18,12 @@ function Video() {
 					<Row className="justify-content-md-center">
 						<Col lg="auto">
 							<iframe
-								class="video-frame"
+								className="video-frame"
 								src='https://www.youtube.com/embed?listType=playlist&list=UUBMaYJ1Cqqi3W1fJwNyghdQ'
-								frameborder='0'
+								frameBorder='0'
 								allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-								referrerpolicy="strict-origin-when-cross-origin"
-								allowfullscreen
+								referrerPolicy="strict-origin-when-cross-origin"
+								allowFullScreen
 							/>
 						</Col>
 					</Row>
