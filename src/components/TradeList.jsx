@@ -25,7 +25,7 @@ const TradeList = () => {
         const allRows = [];
 
         // First row is the date
-        const dateRangeLine = lines[0].split(',')[0].trim();
+        const dateRangeLine = lines[0].split('List ')[1].split(',')[0].trim();
 
         // Second row is the header
         const headers = lines[1].split(',');
