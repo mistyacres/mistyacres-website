@@ -66,18 +66,18 @@ export default function Contact() {
 								<input type="hidden" name="form-name" value="contact" />
 								<div className="form-floating mb-3 bots-r-us">
 									<input type="text" className="form-control" placeholder="Do Not Fill" name="bots-r-us" />
-									<label htmlFor="spam" className="required">Do Not Fill</label>
+									<label htmlFor="spam">Not for humans<span className="required" /></label>
 								</div>
 								<div className="form-floating mb-3">
 									<input type="text" className="form-control" placeholder="Your name" htmlFor="name" name="name" inputMode="text" data-sb-validations="required" required />
-									<label htmlFor="name" className="required">Your name</label>
+									<label htmlFor="name">Your name<span className="required" /></label>
 									<div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
 								</div>
 								<div className="form-floating mb-3">
 									<input type="email" className="form-control" placeholder="name@example.com" htmlFor="email" name="email" data-sb-validations="required,email" inputMode="email" required onChange={(e) => {
 										e.target.value = e.target.value.toLowerCase();
 									}} />
-									<label htmlFor="email" className="required">Email address</label>
+									<label htmlFor="email">Email address<span className="required" /></label>
 									<div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
 									<div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
 								</div>
@@ -90,11 +90,11 @@ export default function Contact() {
 										}
 									}} />
 									<label htmlFor="phone">Phone number</label>
-									<div className="invalid-feedback">A phone number is required.</div>
+									<div className="invalid-feedback">Please enter a valid phone number.</div>
 								</div>
 								<div className="form-floating mb-3">
 									<textarea className="form-control message" placeholder="Enter your message here..." htmlFor="message" name="message" inputMode="text" data-sb-validations="required" required></textarea>
-									<label htmlFor="message" className="required">Message</label>
+									<label htmlFor="message">Message<span className="required" /></label>
 									<div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
 								</div>
 								<button disabled={status === 'submitting'} className="btn btn-primary btn-xl" id="submitButton" aria-label="send" data-callback="onSubmit" data-action="submit">Send</button>
