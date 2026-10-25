@@ -13,22 +13,23 @@
     "@fortawesome/free-regular-svg-icons": "^7.3.1",
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/react-fontawesome": "^3.5.0",
-    "npm": "^12.1.0",
-    "react": "^19.3.0",
+    "npm": "^12.2.1",
+    "npm-check-updates": "^23.1.1",
+    "react": "^19.3.1",
     "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.3.0",
-    "sass": "^1.105.0"
+    "react-dom": "^19.3.1",
+    "sass": "^1.106.1"
   },
   "devDependencies": {
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.1",
+    "@vitejs/plugin-react": "^6.1.2",
     "vite": "^8.3.5",
     "vite-plugin-svgr": "^5.2.0"
   },
   "allowScripts": {
-    "@parcel/watcher@2.5.1": true
+    "@parcel/watcher@2.6.0": true
   }
 }
