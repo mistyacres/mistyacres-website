@@ -1,0 +1,65 @@
+name: Process Trade List Updates
+
+on:
+  pull_request:
+    paths:
+      - "public/assets/tradelist.csv"
+    branches:
+      - tradelist
+
+jobs:
+  validate-and-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Validate CSV format
+        run: |
+          # Simple validation script - adjust based on your CSV requirements
+          python -c "
+          import csv
+          import sys
+          try:
+            with open('public/assets/tradelist.csv', 'r') as file:
+              reader = csv.reader(file)
+              rows = list(reader)
+              # Add specific validation rules here
+              if len(rows) < 1:
+                print('CSV file cannot be empty')
+                sys.exit(1)
+              print(f'CSV validation passed: {len(rows)} rows found')
+          except Exception as e:
+            print(f'CSV validation failed: {str(e)}')
+            sys.exit(1)
+          "
+
+      - name: Auto-merge if validation passes
+        run: |
+          # Only proceed if this is a PR from your client
+          if [[ "${{ github.event.pull_request.user.login }}" == "client-username" ]]; then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git checkout master
+            git merge --no-ff ${{ github.event.pull_request.head.sha }} -m "Auto-merge CSV update"
+            git push
+          else
+            echo "Pull request not from authorised client user, skipping auto-merge"
+            exit 1
+          fi
+
+      - name: Comment on PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'CSV update has been validated and merged to master. The website will update shortly.'
+            })
